@@ -1,0 +1,20 @@
+[
+  {
+    "UpdateStageName": "Oreworlds server build (the zip put at Build zip path)",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "CopyFilePath",
+    "UpdateSourceData": "{{BuildZip}}",
+    "UpdateSourceTarget": "{{$FullBaseDir}}",
+    "UnzipUpdateSource": true,
+    "OverwriteExistingFiles": true,
+    "DeleteAfterExtract": false,
+    "SkipOnFailure": false
+  },
+  {
+    "UpdateStageName": "Make the server runnable",
+    "UpdateSourcePlatform": "Linux",
+    "UpdateSource": "SetExecutableFlag",
+    "UpdateSourceArgs": "{{$FullBaseDir}}Oreworlds/Binaries/Linux/FactoryGame-Linux-Shipping",
+    "SkipOnFailure": false
+  }
+]

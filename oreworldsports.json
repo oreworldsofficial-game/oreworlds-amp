@@ -1,0 +1,9 @@
+[
+  {
+    "Protocol": "TCP",
+    "Port": 29472,
+    "Ref": "GamePort",
+    "Name": "Game Port",
+    "Description": "The port players join on (TCP; Online > Join takes <address>:<port>)"
+  }
+]
