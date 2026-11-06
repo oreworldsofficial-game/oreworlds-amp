@@ -1,20 +1,10 @@
 [
-  {
-    "UpdateStageName": "Oreworlds server build (the zip put at Build zip path)",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "CopyFilePath",
-    "UpdateSourceData": "{{BuildZip}}",
-    "UpdateSourceTarget": "{{$FullBaseDir}}",
-    "UnzipUpdateSource": true,
-    "OverwriteExistingFiles": true,
-    "DeleteAfterExtract": false,
-    "SkipOnFailure": false
-  },
-  {
-    "UpdateStageName": "Make the server runnable",
-    "UpdateSourcePlatform": "Linux",
-    "UpdateSource": "SetExecutableFlag",
-    "UpdateSourceArgs": "{{$FullBaseDir}}Oreworlds/Binaries/Linux/FactoryGame-Linux-Shipping",
-    "SkipOnFailure": false
-  }
+    {
+        "UpdateStageName": "Unpack the Oreworlds server build (the zip at Build zip path)",
+        "UpdateSourcePlatform": "Linux",
+        "UpdateSource": "Executable",
+        "UpdateSourceData": "/bin/bash",
+        "UpdateSourceArgs": "-c \"mkdir -p \\\"{{$FullBaseDir}}\\\" && python3 -m zipfile -e \\\"{{BuildZip}}\\\" \\\"{{$FullBaseDir}}\\\" && chmod +x \\\"{{$FullBaseDir}}Oreworlds/Binaries/Linux/FactoryGame-Linux-Shipping\\\" \\\"{{$FullBaseDir}}start_server.sh\\\" \\\"{{$FullBaseDir}}FactoryGame.sh\\\"\"",
+        "SkipOnFailure": false
+    }
 ]
