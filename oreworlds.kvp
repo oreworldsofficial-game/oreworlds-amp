@@ -21,7 +21,7 @@ Meta.Prerequisites=[]
 Meta.ExtraContainerPackages=[]
 Meta.ConfigReleaseState=NotSpecified
 Meta.NoCommercialUsage=False
-Meta.ConfigVersion=1
+Meta.ConfigVersion=5
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
 Meta.AppConfigId=7da0c0b6-5a5e-4e3c-a24c-b0f8c3f3de0f
@@ -36,13 +36,13 @@ App.ExecutableLinux=Oreworlds/Binaries/Linux/FactoryGame-Linux-Shipping
 App.WorkingDir=
 App.LinuxCommandLineArgs=
 App.WindowsCommandLineArgs=
-App.CommandLineArgs=Oreworlds -nullrhi -nosound -unattended -nosplash -NoVerifyGC -userdir="{{$FullBaseDir}}ServerData" -FGServer -FGPort={{$ApplicationPort1}} -FGMaxPlayers={{$MaxUsers}} -FGServerName="{{ServerName}}" -FGSaveMinutes={{SaveMinutes}} -FGServerWorld="{{ServerWorld}}" -FGSeed="{{Seed}}" {{NewWorld}} {{Sandbox}}
+App.CommandLineArgs=Oreworlds -nullrhi -nosound -unattended -nosplash -NoVerifyGC -userdir="{{$FullBaseDir}}ServerData" -FGServer -FGPort={{$ApplicationPort1}} -FGMaxPlayers={{$MaxUsers}} -FGServerName="{{ServerName}}" -FGSaveMinutes={{SaveMinutes}} {{NewWorld}} {{Sandbox}} {{JoinCode}} -FGPreset={{Preset}} -FGIronFrequency={{IronFrequency}} -FGIronSize={{IronSize}} -FGIronRichness={{IronRichness}} -FGCopperFrequency={{CopperFrequency}} -FGCopperSize={{CopperSize}} -FGCopperRichness={{CopperRichness}} -FGCoalFrequency={{CoalFrequency}} -FGCoalSize={{CoalSize}} -FGCoalRichness={{CoalRichness}} -FGStoneFrequency={{StoneFrequency}} -FGStoneSize={{StoneSize}} -FGStoneRichness={{StoneRichness}} -FGOilFrequency={{OilFrequency}} -FGOilSize={{OilSize}} -FGOilRichness={{OilRichness}} -FGLeadFrequency={{LeadFrequency}} -FGLeadSize={{LeadSize}} -FGLeadRichness={{LeadRichness}} -FGToxicStoneFrequency={{ToxicStoneFrequency}} -FGToxicStoneSize={{ToxicStoneSize}} -FGToxicStoneRichness={{ToxicStoneRichness}} -FGUraniumFrequency={{UraniumFrequency}} -FGUraniumSize={{UraniumSize}} -FGUraniumRichness={{UraniumRichness}} -FGVentsFrequency={{VentsFrequency}} -FGVentsSize={{VentsSize}} -FGSeeps={{Seeps}} -FGSpires={{Spires}} -FGBlooms={{Blooms}} -FGLakes={{Lakes}} -FGLakeSize={{LakeSize}} -FGRockyShores={{RockyShores}} -FGLakeNearStart={{LakeNearStart}} -FGHills={{Hills}} -FGMountains={{Mountains}} -FGTrees={{Trees}} -FGRocks={{Rocks}} -FGFrozenLands={{FrozenLands}} -FGBiomeSize={{BiomeSize}} -FGStartArea={{StartArea}} -FGServerNoDamage={{ServerNoDamage}} -FGSeed={{Seed}} -FGPassword="{{Password}}" -FGServerWorld={{ServerWorld}}
 App.UseLinuxIOREDIR=False
 App.AppSettings={}
 App.EnvironmentVariables={}
 App.CommandLineParameterFormat=-{0}={1}
 App.CommandLineParameterDelimiter= 
-App.ExitMethod=OS_CLOSE
+App.ExitMethod=String
 App.ExitTimeout=60
 App.ExitString=stop
 App.ExitFile=
